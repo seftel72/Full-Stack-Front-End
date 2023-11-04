@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Welcome To Front End.</h1>
+
+</body>
+
+    <script>
+        let ws;
+
+        const proto = window.location.protocol === 'https:' ? 'wss' : 'ws';
+        const host = window.location.host;
+
+        ws = new WebSocket(proto + "://" + host);       
+        ws.onmessage = (event) => {console.log(event.data)};
+
+    </script>
+
+
+</html>
